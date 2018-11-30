@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.left .left-sidebar .calendar_container {
+  padding: 10px;
+}
+
+.left .left-sidebar .calendar_container .calendar_title {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+  color: #2d3436;
+  cursor: default;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.left .left-sidebar .calendar_container .calendar_title span {
+  position: relative;
+  top: -2px;
+  color: #dfe6e9;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-size: 26px;
+  transition: all 0.3s;
+}
+
+.left .left-sidebar .calendar_container .calendar_title span:hover {
+  color: #0984e3;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.left .left-sidebar .calendar_container .calendar_title #prev {
+  float: left;
+}
+
+.left .left-sidebar .calendar_container .calendar_title #next {
+  float: right;
+}
+
+.left .left-sidebar .calendar_container #calendar {
+  table-layout: fixed;
+  margin: 0;
+}
+
+.left .left-sidebar .calendar_container #calendar tbody tr:nth-child(odd) {
+  background-color: #dfe6e9;
+}
+
+.left .left-sidebar .calendar_container #calendar tbody #header th {
+  text-align: center;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  border: none;
+}
+
+.left .left-sidebar .calendar_container #calendar tbody .weeks td {
+  text-align: center;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.left .left-sidebar .calendar_container #calendar tbody .weeks td .today {
+  background-color: #0984e3;
+  color: #dfe6e9;
+  border-radius: 3px;
+}
+
+.left .left-sidebar .calendar_container #calendar tbody .weeks td a {
+  display: block;
+  text-decoration: none;
+  color: #2d3436;
+  padding: 10px 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.left .left-sidebar .calendar_container #calendar tbody .weeks td a:hover {
+  background-color: #0984e3;
+  color: #dfe6e9;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/*# sourceMappingURL=style.css.map */
