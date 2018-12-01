@@ -87,4 +87,10 @@
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+
+.main .visit_title {
+  font-family: "Open Sans", sans-serif;
+  color: #2d3436;
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */

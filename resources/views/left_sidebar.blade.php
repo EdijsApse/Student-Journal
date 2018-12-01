@@ -16,7 +16,7 @@
                 ng-click="get_event(z)" 
                 data-toggle="modal" 
                 data-target="#event">
-                    <a href="{{url('/')}}/<%active_year%>-<%active_month%>-<%z%>"
+                    <a href="{{url('/')}}/<%active_year%>-<%active_month+1%>-<%z%>"
                         class="day" 
                         ng-class="{today : z == today_date && today_month == active_month && today_year == active_year}"
                         ng-if="z != ''"><%z%></span>

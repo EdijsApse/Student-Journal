@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::get('/', 'JournalController@get_todays_visit');
+Route::get('/{year}-{month}-{date}', 'JournalController@get_visit')->middleware('correctDate');
+Route::get('/failed', function(){
+    return view('failed');
 });
