@@ -10,8 +10,7 @@
         <link href="{{ url('/') }}/css/style.css" rel="stylesheet">
         <script src="{{ url('/') }}/libs/jQuery/jquery2.1.4.min.js"></script>
         <script src="{{ url('/') }}/libs/bootstrap/js/bootstrap.js"></script>
-        <script src="{{ url('/') }}/libs/AngularJS/angular.min.js"></script>
-        <script src="{{ url('/')}}/calendar/js/effects.js"></script>
+        <script src="{{ url('/') }}/libs/angularJS/angular.min.js"></script>
         <script src="{{ url('/')}}/calendar/js/cal_object.js"></script>        
         @yield('additional_head')
     </head>
@@ -29,5 +28,6 @@
                 </div>
             </div>
         </div>
+        @yield('modals')
     </body>
 </html>
