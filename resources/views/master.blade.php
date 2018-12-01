@@ -11,7 +11,9 @@
         <script src="{{ url('/') }}/libs/jQuery/jquery2.1.4.min.js"></script>
         <script src="{{ url('/') }}/libs/bootstrap/js/bootstrap.js"></script>
         <script src="{{ url('/') }}/libs/angularJS/angular.min.js"></script>
-        <script src="{{ url('/')}}/calendar/js/cal_object.js"></script>        
+        <script src="{{ url('/')}}/calendar/js/cal_object.js"></script>
+        <script src="{{url('/')}}/js/drag_drop.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         @yield('additional_head')
     </head>
     <body>
