@@ -103,17 +103,16 @@ $primary:'Open Sans', sans-serif;
         display: block;
         margin: 0 auto;
         font-family: $primary;
-        background-color: #FFF;
-        color: #2d3436;
-        box-shadow: 0px 0px 1px 0px #2d3436;
+        color: #FFF !important;
+        background-color: #0984e3;
         font-size: 16px;
         border: none;
+        opacity: 0.9;
         transition: all 0.3s;
         &:hover{
-            background-color: #0984e3;
-            color: #dfe6e9;
+            background-color: #006abc;
+            opacity: 1;
             transition: all 0.3s;
-
         }
         &:active{
             outline: none;
@@ -295,6 +294,49 @@ $primary:'Open Sans', sans-serif;
                         background-color: #006abc;
                     }
                 }
+            }
+        }
+    }
+}
+.right{
+    z-index: 9999;
+    .student_list{
+        display: block;
+        width: 99%;
+        margin: 0 auto;
+        padding: 3px 0;
+        margin-top: 15px;
+        background-color: #FFF;
+        border-radius: 3px;
+        h3{
+            margin: 0;
+            padding: 0;
+            padding-bottom: 5px;
+            font-family: $primary;
+            text-align: center;
+            border-bottom: 2px solid #ccc;
+        }
+        .student{
+            display: block;
+            width: 80%;
+            margin: 3px auto;
+            background-color:#0984e3;
+            border-radius: 3px;
+            padding: 8px;
+            opacity: 0.8;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover{
+                opacity: 1;
+                background-color: #006abc;
+                transition: all 0.3s;
+            }
+            h4{
+                color: #FFF;
+                text-align: left;
+                font-family: $primary;
+                margin: 0;
+                padding: 0;
             }
         }
     }
