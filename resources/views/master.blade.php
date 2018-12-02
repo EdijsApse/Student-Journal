@@ -13,7 +13,7 @@
         <script src="{{ url('/') }}/libs/angularJS/angular.min.js"></script>
         <script src="{{ url('/')}}/calendar/js/cal_object.js"></script>
         <script src="{{url('/')}}/js/drag_drop.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="{{url('/')}}/js/additional_effects.js"></script>
         @yield('additional_head')
     </head>
     <body>
@@ -31,5 +31,48 @@
             </div>
         </div>
         @yield('modals')
+        <div id="student_modal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <form class="my-form">
+                            <div class="form-group">
+                                <label for="name">Studenta vārds:</label>
+                                <input type="text" class="form-control" name="name" placeholder="Studenta vārds. Max garums - 20">
+                                <span class="required glyphicon glyphicon-asterisk"><span>Obligāts<span></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="surname">Studenta uzvārds:</label>
+                                <input type="text" class="form-control" name="surname" placeholder="Studenta uzvārds. Max garums - 20">
+                                <span class="required glyphicon glyphicon-asterisk"><span>Obligāts<span></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Studenta e-pasts:</label>
+                                <input type="text" class="form-control" name="email" placeholder="Studenta e-pasta adrese. Max garums - 30">
+                                <span class="required glyphicon glyphicon-asterisk"><span>Obligāts<span></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="number">Studneta mobila numurs:</label>
+                                <input type="number" class="form-control" name="number" placeholder="Studenta mobila numurs. Garums - 8">
+                                <span class="optional glyphicon glyphicon-asterisk"><span>Izvēles<span></span>
+                            </div>
+                            <div class="students">
+                                <label>Studenta attēls:</label>
+                                <span class="optional glyphicon glyphicon-asterisk"><span>Izvēles</span></span>
+                                <div class="student_image"></div>​
+                                <label id="upload_image" for="file_upload">
+                                    <p>Izvēlēties attēlu</p>
+                                </label>
+                                <input id="file_upload" name="selected_image" type="file" accept=".jpg, .jpeg, .png" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default my-btn modal_close" data-dismiss="modal">Atcelt</button>
+                        <button type="button" class="btn btn-default my-btn add">Pievienot</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

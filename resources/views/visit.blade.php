@@ -15,7 +15,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
-                    <form class="lecture_form">
+                    <form class="my-form">
                         <div class="form-group">
                             <label for="title">Lekcijas nosaukums:</label>
                             <input type="text" class="form-control" name="title" placeholder="Piem: Ievads PHP. Max garums - 20">

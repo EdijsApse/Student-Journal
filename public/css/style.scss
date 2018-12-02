@@ -129,7 +129,7 @@ $primary:'Open Sans', sans-serif;
         .modal-content{
             .modal-body{
                 padding: 5px;
-                .lecture_form{
+                .my-form{
                     .form-group{
                         display: inline-block;
                         width: 100%;
@@ -170,6 +170,17 @@ $primary:'Open Sans', sans-serif;
                             margin-left: 3px;
                             font-size: 10px;
                             color: #ee5253;
+                            span{
+                                font-size: 14px;
+                                margin-left: 5px;
+                            }
+                        }
+                        .optional{
+                            position: relative;
+                            top: -6px;
+                            margin-left: 3px;
+                            font-size: 10px;
+                            color: #0984e3;
                             span{
                                 font-size: 14px;
                                 margin-left: 5px;
@@ -225,6 +236,17 @@ $primary:'Open Sans', sans-serif;
                                 margin-left: 5px;
                             }
                         }
+                        .optional{
+                            position: relative;
+                            top: -6px;
+                            margin-left: 3px;
+                            font-size: 10px;
+                            color: #0984e3;
+                            span{
+                                font-size: 14px;
+                                margin-left: 5px;
+                            }
+                        }
                         .attendance{
                             display: inline-block;
                             width: 100%;
@@ -267,6 +289,45 @@ $primary:'Open Sans', sans-serif;
                                     }
                                 }
                             }
+                        }
+                        .student_image{
+                            display: block;
+                            width: 40%;
+                            margin:5px auto;
+                            min-height: 200px;
+                            border: 2px dashed #999;
+                            border-radius: 5px;
+                        }
+                        #upload_image{
+                            position: relative;
+                            display: block;
+                            width: 40%;
+                            margin:0px auto;
+                            padding: 5px;
+                            font-family: $primary;
+                            background-color: #0984e3;
+                            color: #FFF;
+                            font-size: 16px;
+                            border: none;
+                            text-align: center;
+                            border-radius: 3px;
+                            transition: all 0.3s;
+                            opacity: 0.9;
+                            float: none;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: #006abc;
+                                opacity: 1;
+                                transition: all 0.3s;
+                            }
+                            p{
+                                display: inline-block;
+                                padding: 0;
+                                margin: 0;
+                            }
+                        }
+                        #file_upload{
+                            display: none;
                         }
                     }
                 }
@@ -335,13 +396,12 @@ $primary:'Open Sans', sans-serif;
             padding-bottom: 5px;
             font-family: $primary;
             text-align: center;
-            border-bottom: 2px solid #ccc;
         }
         .student{
             display: block;
             width: 80%;
             margin: 3px auto;
-            background-color:#0984e3;
+            background-color:#dfe6e9;
             border-radius: 3px;
             padding: 8px;
             opacity: 0.8;
@@ -349,16 +409,49 @@ $primary:'Open Sans', sans-serif;
             transition: all 0.3s;
             &:hover{
                 opacity: 1;
-                background-color: #006abc;
+                background-color: #2d3436;
                 transition: all 0.3s;
+                h4{
+                    color: #FFF;
+                }
             }
             h4{
-                color: #FFF;
+                color: #2d3436;
                 text-align: left;
                 font-family: $primary;
                 margin: 0;
                 padding: 0;
+                transition: all 0.3s;
             }
         }
+    }
+    .add_student{
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        font-family: $primary;
+        background-color: #0984e3;
+        color: #FFF;
+        font-size: 16px;
+        border: none;
+        transition: all 0.3s;
+        opacity: 0.9;
+        &:hover{
+            opacity: 1;
+            background-color: #006abc;
+            transition: all 0.3s;
+
+        }
+        &:active{
+            outline: none;
+            border: none;
+            background-color: #006abc;
+        }
+        &:focus{
+            outline: none;
+            border: none;
+            color: #FFF;
+        }            
     }
 }

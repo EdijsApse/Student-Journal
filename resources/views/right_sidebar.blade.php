@@ -24,4 +24,5 @@
     <div class="student" draggable="true">
         <h4>Madara Apse</h4>
     </div>
+    <button class="btn btn-default add_student" data-toggle="modal" data-target="#student_modal">Pievienot studentu</button>
 </div>

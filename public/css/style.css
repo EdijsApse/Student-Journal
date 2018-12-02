@@ -136,7 +136,7 @@
   padding: 5px;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .form-group {
+.modal .modal-dialog .modal-content .modal-body .my-form .form-group {
   display: inline-block;
   width: 100%;
   margin: 0;
@@ -145,7 +145,7 @@
   border-bottom: 1px solid #c8d6e5;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .form-group label {
+.modal .modal-dialog .modal-content .modal-body .my-form .form-group label {
   display: block;
   width: 30%;
   float: left;
@@ -156,7 +156,7 @@
   margin-top: 2px;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .form-group input {
+.modal .modal-dialog .modal-content .modal-body .my-form .form-group input {
   display: block;
   width: 50%;
   float: left;
@@ -169,14 +169,14 @@
   height: 30px;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .form-group input:focus {
+.modal .modal-dialog .modal-content .modal-body .my-form .form-group input:focus {
   border-color: #12adce;
   -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.075) inset, 0 0 4px #12adce;
           box-shadow: 0 1px 0px rgba(0, 0, 0, 0.075) inset, 0 0 4px #12adce;
   outline: 0 none;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .form-group .required {
+.modal .modal-dialog .modal-content .modal-body .my-form .form-group .required {
   position: relative;
   top: -6px;
   margin-left: 3px;
@@ -184,12 +184,25 @@
   color: #ee5253;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .form-group .required span {
+.modal .modal-dialog .modal-content .modal-body .my-form .form-group .required span {
   font-size: 14px;
   margin-left: 5px;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .form-group #description {
+.modal .modal-dialog .modal-content .modal-body .my-form .form-group .optional {
+  position: relative;
+  top: -6px;
+  margin-left: 3px;
+  font-size: 10px;
+  color: #0984e3;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .form-group .optional span {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .form-group #description {
   display: block;
   width: 50%;
   height: 80px;
@@ -209,37 +222,37 @@
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .form-group #description:focus {
+.modal .modal-dialog .modal-content .modal-body .my-form .form-group #description:focus {
   border-color: #12adce;
   -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.075) inset, 0 0 4px #12adce;
           box-shadow: 0 1px 0px rgba(0, 0, 0, 0.075) inset, 0 0 4px #12adce;
   outline: 0 none;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .form-group #description::-webkit-input-placeholder {
+.modal .modal-dialog .modal-content .modal-body .my-form .form-group #description::-webkit-input-placeholder {
   color: #999;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .form-group #description:-ms-input-placeholder {
+.modal .modal-dialog .modal-content .modal-body .my-form .form-group #description:-ms-input-placeholder {
   color: #999;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .form-group #description::-ms-input-placeholder {
+.modal .modal-dialog .modal-content .modal-body .my-form .form-group #description::-ms-input-placeholder {
   color: #999;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .form-group #description::placeholder {
+.modal .modal-dialog .modal-content .modal-body .my-form .form-group #description::placeholder {
   color: #999;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .students {
+.modal .modal-dialog .modal-content .modal-body .my-form .students {
   display: inline-block;
   width: 100%;
   padding: 10px;
   padding-bottom: 5px;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .students label {
+.modal .modal-dialog .modal-content .modal-body .my-form .students label {
   display: block;
   width: auto;
   float: left;
@@ -250,7 +263,7 @@
   margin-top: 2px;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .students .required {
+.modal .modal-dialog .modal-content .modal-body .my-form .students .required {
   position: relative;
   top: -6px;
   margin-left: 3px;
@@ -258,18 +271,31 @@
   color: #ee5253;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .students .required span {
+.modal .modal-dialog .modal-content .modal-body .my-form .students .required span {
   font-size: 14px;
   margin-left: 5px;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .students .attendance {
+.modal .modal-dialog .modal-content .modal-body .my-form .students .optional {
+  position: relative;
+  top: -6px;
+  margin-left: 3px;
+  font-size: 10px;
+  color: #0984e3;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students .optional span {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance {
   display: inline-block;
   width: 100%;
   padding: 5px;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .students .attendance .visit {
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit {
   position: relative;
   display: block;
   height: auto;
@@ -282,7 +308,7 @@
           box-shadow: 0px 0px 2px 0px #999;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .students .attendance .visit h3 {
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit h3 {
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
   font-size: 20px;
@@ -294,7 +320,7 @@
   text-align: center;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .students .attendance .visit .student {
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .student {
   display: block;
   width: 90%;
   margin: 3px auto;
@@ -304,12 +330,58 @@
   cursor: pointer;
 }
 
-.modal .modal-dialog .modal-content .modal-body .lecture_form .students .attendance .visit .student h4 {
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .student h4 {
   color: #FFF;
   text-align: left;
   font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students .student_image {
+  display: block;
+  width: 40%;
+  margin: 5px auto;
+  min-height: 200px;
+  border: 2px dashed #999;
+  border-radius: 5px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students #upload_image {
+  position: relative;
+  display: block;
+  width: 40%;
+  margin: 0px auto;
+  padding: 5px;
+  font-family: "Open Sans", sans-serif;
+  background-color: #0984e3;
+  color: #FFF;
+  font-size: 16px;
+  border: none;
+  text-align: center;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0.9;
+  float: none;
+  cursor: pointer;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students #upload_image:hover {
+  background-color: #006abc;
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students #upload_image p {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students #file_upload {
+  display: none;
 }
 
 .modal .modal-dialog .modal-content .modal-footer .my-btn {
@@ -387,14 +459,13 @@
   padding-bottom: 5px;
   font-family: "Open Sans", sans-serif;
   text-align: center;
-  border-bottom: 2px solid #ccc;
 }
 
 .right .student_list .student {
   display: block;
   width: 80%;
   margin: 3px auto;
-  background-color: #0984e3;
+  background-color: #dfe6e9;
   border-radius: 3px;
   padding: 8px;
   opacity: 0.8;
@@ -405,16 +476,56 @@
 
 .right .student_list .student:hover {
   opacity: 1;
+  background-color: #2d3436;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.right .student_list .student:hover h4 {
+  color: #FFF;
+}
+
+.right .student_list .student h4 {
+  color: #2d3436;
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.right .add_student {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-family: "Open Sans", sans-serif;
+  background-color: #0984e3;
+  color: #FFF;
+  font-size: 16px;
+  border: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0.9;
+}
+
+.right .add_student:hover {
+  opacity: 1;
   background-color: #006abc;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.right .student_list .student h4 {
+.right .add_student:active {
+  outline: none;
+  border: none;
+  background-color: #006abc;
+}
+
+.right .add_student:focus {
+  outline: none;
+  border: none;
   color: #FFF;
-  text-align: left;
-  font-family: "Open Sans", sans-serif;
-  margin: 0;
-  padding: 0;
 }
 /*# sourceMappingURL=style.css.map */

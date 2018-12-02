@@ -50,4 +50,5 @@ $(document).ready(function(){
         }
         $(this).append($(student));
     })
+    //Upper functions all for students drag and drop
 })
