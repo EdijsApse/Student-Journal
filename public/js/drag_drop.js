@@ -50,5 +50,54 @@ $(document).ready(function(){
         }
         $(this).append($(student));
     })
-    //Upper functions all for students drag and drop
+    //Drag and drop for files
+    $(window).on('drop', function(e){
+        e.preventDefault();
+    });
+    $(window).on('dragover', function(e){
+        e.preventDefault();
+    });
+    $("#student_image").on('dragover', function(e){
+        e.preventDefault();
+        $(this).css('background-color', '#CCC');
+    });
+    $("#student_image").on('dragleave', function(){
+        $(this).css('background-color', '#FFF');
+    })
+    $('#student_image').on('drop', function(e){
+        e.preventDefault();
+        var files = e.originalEvent.dataTransfer.files,//Uploaded files
+            file_type,
+            temp_path;
+        temp_path = URL.createObjectURL(files[0]);//To get temp files path emiting files location (vilto faila atrašanās vietu)
+        $(this).css('background-color', '#FFF');
+    if(files.length > 1){
+        alert('Vairāk par vienu failu');
+    }
+    else{
+        file_type = files[0].type.split('/');//Spliting type into array (type always will be image/jpeg u.t.t)
+        if(file_type[0] == 'image'){//Arrays 0 element is files type (image, text, video ...)
+            $("#student_image > img").attr('src', temp_path);
+            $("#student_image > img").fadeIn('slow');
+            $("#upload_image").fadeOut('fast');
+        }
+        else{
+            alert('Nav bilde');
+        }
+    }
+    });
+    //Drag and drop for image upload ends
+    $("#file_upload").change(function(e){//If image is selected, if so, user still can drop file into
+        var temp_path = URL.createObjectURL(e.target.files[0]),
+        file_type;
+        file_type = e.target.files[0].type.split('/');
+        if(file_type[0] == 'image'){
+            $("#student_image > img").attr('src', temp_path);
+            $("#student_image > img").fadeIn('slow');
+            $("#upload_image").fadeOut('fast');
+        }
+        else{
+            alert('Nav bilde');
+        }
+    });
 })

@@ -52,15 +52,19 @@
                                 <span class="required glyphicon glyphicon-asterisk"><span>Obligāts<span></span>
                             </div>
                             <div class="form-group">
-                                <label for="number">Studneta mobila numurs:</label>
+                                <label for="number">Studenta mobila numurs:</label>
                                 <input type="number" class="form-control" name="number" placeholder="Studenta mobila numurs. Garums - 8">
                                 <span class="optional glyphicon glyphicon-asterisk"><span>Izvēles<span></span>
                             </div>
                             <div class="students">
                                 <label>Studenta attēls:</label>
                                 <span class="optional glyphicon glyphicon-asterisk"><span>Izvēles</span></span>
-                                <div class="student_image"></div>​
+                                <div id='student_image' class="student_image">
+                                    <img src=""/>
+                                </div>​
                                 <label id="upload_image" for="file_upload">
+                                    <span class="choose">Ievelc attēlu paredzētajā vietā</span>
+                                    <span>vai</span>
                                     <p>Izvēlēties attēlu</p>
                                 </label>
                                 <input id="file_upload" name="selected_image" type="file" accept=".jpg, .jpeg, .png" />

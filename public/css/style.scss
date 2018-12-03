@@ -297,33 +297,49 @@ $primary:'Open Sans', sans-serif;
                             min-height: 200px;
                             border: 2px dashed #999;
                             border-radius: 5px;
+                            img{
+                                display: none;
+                                width: 98%;
+                                margin: 1%;
+                                height: auto;
+                            }
                         }
                         #upload_image{
-                            position: relative;
                             display: block;
-                            width: 40%;
-                            margin:0px auto;
-                            padding: 5px;
-                            font-family: $primary;
-                            background-color: #0984e3;
-                            color: #FFF;
-                            font-size: 16px;
-                            border: none;
-                            text-align: center;
-                            border-radius: 3px;
-                            transition: all 0.3s;
-                            opacity: 0.9;
-                            float: none;
-                            cursor: pointer;
-                            &:hover{
-                                background-color: #006abc;
-                                opacity: 1;
-                                transition: all 0.3s;
-                            }
+                            width: 100%;
                             p{
-                                display: inline-block;
-                                padding: 0;
-                                margin: 0;
+                                display: block;
+                                width: 40%;
+                                margin:0px auto;
+                                padding: 5px;
+                                font-family: $primary;
+                                background-color: #0984e3;
+                                color: #FFF;
+                                font-size: 16px;
+                                border: none;
+                                text-align: center;
+                                border-radius: 3px;
+                                transition: all 0.3s;
+                                opacity: 0.9;
+                                float: none;
+                                cursor: pointer;
+                                &:hover{
+                                    opacity: 1;
+                                    background-color: #006abc;
+                                    transition: all 0.3s;
+                                }
+                            }
+                            span{
+                                display: block;
+                                width: 100%;
+                                text-align: center;
+                                font-family: $primary;
+                                color: #2d3436;
+                                margin: 10px 0;
+                            }
+                            .choose{
+                                font-size: 18px;
+                                font-weight: bold;
                             }
                         }
                         #file_upload{

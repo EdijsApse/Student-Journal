@@ -347,8 +347,19 @@
   border-radius: 5px;
 }
 
+.modal .modal-dialog .modal-content .modal-body .my-form .students .student_image img {
+  display: none;
+  width: 98%;
+  margin: 1%;
+  height: auto;
+}
+
 .modal .modal-dialog .modal-content .modal-body .my-form .students #upload_image {
-  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students #upload_image p {
   display: block;
   width: 40%;
   margin: 0px auto;
@@ -367,17 +378,25 @@
   cursor: pointer;
 }
 
-.modal .modal-dialog .modal-content .modal-body .my-form .students #upload_image:hover {
-  background-color: #006abc;
+.modal .modal-dialog .modal-content .modal-body .my-form .students #upload_image p:hover {
   opacity: 1;
+  background-color: #006abc;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.modal .modal-dialog .modal-content .modal-body .my-form .students #upload_image p {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
+.modal .modal-dialog .modal-content .modal-body .my-form .students #upload_image span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: #2d3436;
+  margin: 10px 0;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students #upload_image .choose {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .modal .modal-dialog .modal-content .modal-body .my-form .students #file_upload {
