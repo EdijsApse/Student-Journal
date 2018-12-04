@@ -16,3 +16,4 @@ Route::get('/{year}-{month}-{date}', 'JournalController@get_visit')->middleware(
 Route::get('/failed', function(){
     return view('failed');
 });
+Route::post('/ajax_handler', 'JournalController@add_student');

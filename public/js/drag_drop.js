@@ -57,6 +57,7 @@ $(document).ready(function(){
     $(window).on('dragover', function(e){
         e.preventDefault();
     });
+    //Disabling window's events so browser wont open file
     $("#student_image").on('dragover', function(e){
         e.preventDefault();
         $(this).css('background-color', '#CCC');
@@ -66,7 +67,7 @@ $(document).ready(function(){
     })
     $('#student_image').on('drop', function(e){
         e.preventDefault();
-        var files = e.originalEvent.dataTransfer.files,//Uploaded files
+        var files = e.originalEvent.dataTransfer.files,//Droped file
             file_type,
             temp_path;
         temp_path = URL.createObjectURL(files[0]);//To get temp files path emiting files location (vilto faila atrašanās vietu)
@@ -80,6 +81,8 @@ $(document).ready(function(){
             $("#student_image > img").attr('src', temp_path);
             $("#student_image > img").fadeIn('slow');
             $("#upload_image").fadeOut('fast');
+            //Zemākā rinda noseto inputa lauka vērtību kā failu, savādāk ajax'i nevar piekļūt ja bilde ir ievilkta
+            $("input[type='file']").prop("files", files);
         }
         else{
             alert('Nav bilde');
