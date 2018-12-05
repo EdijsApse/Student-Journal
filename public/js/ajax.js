@@ -22,10 +22,19 @@ $(document).ready(function(){
                 catch(error){
                     console.log('Atbilde no servera nav derīga');
                 }
-                console.log(response);
+                if(response.error == null){
+                    $('.notification > ul > li').text(response.success);
+                    $('.notification').fadeIn('fast');
+                    //Ajax call to get last added student or page refresh and let laravel add student to list
+                }
+                else{
+                    $('.notification > ul > li').text(response.error);
+                    $('.notification').fadeIn('fast');
+                }
             },
-            error:function(){
-
+            error:function(error){
+                $('.notification > ul > li').text(error.responseText);
+                $('.notification').fadeIn('fast');
             }
         })
     })

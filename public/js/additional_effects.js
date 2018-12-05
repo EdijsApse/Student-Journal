@@ -1,8 +1,21 @@
 $(document).ready(function(){
-    $('.add_student').click(function(){
-        $('.right').css('z-index', '0');
+    $('.close').click(function(){
+        $(this).parent('.notification').fadeOut('fast', function(){
+            $('.message').text('');
+        })
     })
-    $('#student_modal').on('hidden.bs.modal', function () {
-        $('.right').css('z-index', '9999');
+    $('.modal').on('hidden.bs.modal', function () {
+        $('.notification').hide();
+        $(".message").text('');
+    })
+    $('.student').click(function(){
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+            $(this).children('.details').slideUp('fast');
+        }
+        else{
+            $(this).addClass('active');
+            $(this).children('.details').slideDown('fast');
+        }
     })
 });

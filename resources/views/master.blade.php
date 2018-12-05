@@ -15,6 +15,8 @@
         <script src="{{ url('/')}}/calendar/js/cal_object.js"></script>
         <script src="{{url('/')}}/js/drag_drop.js"></script>
         <script src="{{url('/')}}/js/ajax.js"></script>
+        <script src="{{url('/')}}/js/after_ajax.js"></script>
+        <script src="{{url('/')}}/js/additional_effects.js"></script>
         @yield('additional_head')
     </head>
     <body>
@@ -75,6 +77,12 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default my-btn modal_close" data-dismiss="modal">Atcelt</button>
                         <button id="add_student" type="button" class="btn btn-default my-btn add">Pievienot</button>
+                        <div class="alert alert-danger notification">
+                            <span class="glyphicon glyphicon-remove close"></span>
+                            <ul>
+                                <li class="message"></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

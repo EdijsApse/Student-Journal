@@ -322,12 +322,26 @@
 
 .modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .student {
   display: block;
-  width: 90%;
+  width: 80%;
   margin: 3px auto;
-  background-color: #0984e3;
+  background-color: #dfe6e9;
   border-radius: 3px;
   padding: 8px;
+  opacity: 0.8;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .student:hover {
+  opacity: 1;
+  background-color: #2d3436;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .student:hover h4 {
+  color: #FFF;
 }
 
 .modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .student h4 {
@@ -336,6 +350,107 @@
   font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .student h4 span {
+  position: relative;
+  top: -5px;
+  float: right;
+  font-size: 30px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .student .details {
+  position: relative;
+  display: none;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 2px;
+  padding: 0;
+  background-color: #FFF;
+  padding: 5px 0px;
+  border-radius: 3px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .student .details .image {
+  display: block;
+  width: 100px;
+  margin: 0px auto;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .student .details .image img {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .student .details ul {
+  position: relative;
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 3px;
+  padding: 0;
+  border-top: 2px solid #CCC;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .student .details ul li {
+  margin: 2px 0px;
+  padding: 0;
+  font-size: 15px;
+  text-indent: 5px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .student .details a {
+  position: relative;
+  width: 50%;
+  display: block;
+  margin: 5px auto;
+  font-family: "Open Sans", sans-serif;
+  background-color: #0984e3;
+  color: #FFF;
+  font-size: 16px;
+  border: none;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 2px 0px #333;
+          box-shadow: 0px 0px 2px 0px #333;
+  text-align: center;
+  padding: 4px;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0.9;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .student .details a:hover {
+  opacity: 1;
+  background-color: #006abc;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .student .details a:active {
+  outline: none;
+  border: none;
+  background-color: #006abc;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .student .details a:focus {
+  outline: none;
+  border: none;
+  color: #FFF;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .active {
+  opacity: 1;
+  background-color: #2d3436;
+}
+
+.modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .active h4 {
+  color: #FFF;
 }
 
 .modal .modal-dialog .modal-content .modal-body .my-form .students .student_image {
@@ -451,6 +566,52 @@
   background-color: #006abc;
 }
 
+.modal .modal-dialog .modal-content .modal-footer .notification {
+  position: relative;
+  top: 5px;
+  display: none;
+  clear: both;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 14px;
+  background-color: #FFF;
+  -webkit-box-shadow: 0px 0px 2px 0px #000;
+          box-shadow: 0px 0px 2px 0px #000;
+  border: none;
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+}
+
+.modal .modal-dialog .modal-content .modal-footer .notification .close {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  margin: 2px;
+  font-size: 20px;
+  color: #c60000;
+  opacity: 0.8;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal .modal-dialog .modal-content .modal-footer .notification .close:hover {
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal .modal-dialog .modal-content .modal-footer .notification ul {
+  margin: 0;
+  padding: 3px;
+}
+
+.modal .modal-dialog .modal-content .modal-footer .notification ul li {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
 .right {
   z-index: 9999;
 }
@@ -512,6 +673,112 @@
   padding: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.right .student_list .student h4 span {
+  position: relative;
+  top: -5px;
+  float: right;
+  font-size: 30px;
+}
+
+.right .student_list .student .details {
+  position: relative;
+  display: none;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 2px;
+  padding: 0;
+  background-color: #FFF;
+  padding: 5px 0px;
+  border-radius: 3px;
+}
+
+.right .student_list .student .details .image {
+  display: block;
+  width: 100px;
+  margin: 0px auto;
+}
+
+.right .student_list .student .details .image img {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.right .student_list .student .details ul {
+  position: relative;
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 3px;
+  padding: 0;
+  border-top: 2px solid #CCC;
+}
+
+.right .student_list .student .details ul li {
+  margin: 2px 0px;
+  padding: 0;
+  font-size: 15px;
+  text-indent: 5px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.right .student_list .student .details a {
+  position: relative;
+  width: 50%;
+  display: block;
+  margin: 5px auto;
+  font-family: "Open Sans", sans-serif;
+  background-color: #0984e3;
+  color: #FFF;
+  font-size: 16px;
+  border: none;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 2px 0px #333;
+          box-shadow: 0px 0px 2px 0px #333;
+  text-align: center;
+  padding: 4px;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0.9;
+}
+
+.right .student_list .student .details a:hover {
+  opacity: 1;
+  background-color: #006abc;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.right .student_list .student .details a:active {
+  outline: none;
+  border: none;
+  background-color: #006abc;
+}
+
+.right .student_list .student .details a:focus {
+  outline: none;
+  border: none;
+  color: #FFF;
+}
+
+.right .student_list .active {
+  opacity: 1;
+  background-color: #2d3436;
+}
+
+.right .student_list .active h4 {
+  color: #FFF;
+}
+
+.right .student_list p {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  color: #2d3436;
+  font-size: 14px;
 }
 
 .right .add_student {
