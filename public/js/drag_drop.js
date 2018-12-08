@@ -1,7 +1,3 @@
-/*function drag_start_function(e){
-    $('.attended').css('box-shadow', '0px 0px 3px 1px #006abc');
-    $('.skiped').css('box-shadow', '0px 0px 3px 1px #ef2d2e');
-}*/
 $(document).ready(function(){
     var student,
         attended_styles = {
@@ -23,10 +19,12 @@ $(document).ready(function(){
     })
     $(".student").on('dragstart', function(){//If user stops draging student
         student = $(this);
+        $('.student_list').css('box-shadow','0px 0px 3px 1px #CCC');
     })
     $(".student").on('dragend', function(){//If user stops draging student
         $('.attended').css(default_styles);
         $('.skiped').css(default_styles);
+        $('.student_list').css('box-shadow','none');
     })
     $(".visit").on('dragover', function(e){
         e.preventDefault();//To allow drop
@@ -49,6 +47,16 @@ $(document).ready(function(){
             $(student).css('background-color','#006abc');
         }
         $(this).append($(student));
+    })
+    $(".student_list").on('dragover', function(e){
+        e.preventDefault();
+    })
+    $(".student_list").on('drop', function(){
+        $(student).css({
+            'background-color':'#dfe6e9'
+        });
+        
+        $(this).append(student);
     })
     //Drag and drop for files
     $(window).on('drop', function(e){

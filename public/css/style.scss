@@ -9,7 +9,7 @@ $primary:'Open Sans', sans-serif;
             .calendar_title{
                 display: block;
                 text-align: center;
-                font-size: 24px;
+                font-size: 20px;
                 font-family: $primary;
                 color: #2d3436;
                 cursor: default;
@@ -85,12 +85,177 @@ $primary:'Open Sans', sans-serif;
     }
 }
 .main{
-    .visit_title{
-        font-family: $primary;
-        color: #2d3436;
-        text-align: center;
+    padding: 0;
+    .sections{
+        display: block;
+        width: 100%;
+        background-color: #f0f0f0;
+        margin:5px 0px;
+        ul{
+            display: block;
+            width: 100%;
+            padding: 5px;
+            margin: 0;
+            li{
+                display: inline-block;
+                margin: 0 3px;
+                padding: 0;
+                a{
+                    display: inline-block;
+                    font-family: $primary;
+                    text-decoration: none;
+                    margin: 2px;
+                    font-size: 18px;
+                    color: #2d3436;
+                    transition: all 0.3s;
+                    &:hover{
+                        transition: all 0.3s;
+                        color: #0984e3;
+                    }
+                }
+                .active{
+                    color: #0984e3;
+                    font-weight: bold;
+                }
+                span{
+                    font-size: 18px;
+                }
+            }
+        }
     }
     .lectures{
+        position: relative;
+        width: 95%;
+        margin: 0 auto;
+        padding: 5px;
+        .lecture{
+            display: block;
+            background-color: #FFF;
+            margin: 7px;
+            box-shadow: 0px 0px 3px 1px #ccc;
+            border-radius: 3px;
+            padding: 3px;
+            h3{
+                width: 95%;
+                margin: 0 auto;
+                padding: 10px;
+                text-align: left;
+                font-family: $primary;
+                color: #2d3436;
+                border-bottom: 2px solid #2d3436;
+                
+            }
+            .lecture_description{
+                display: inline-block;
+                width: 95%;
+                left: 2.5%;
+                padding: 5px;
+                p{
+                    text-indent: 10px;
+                    text-align: left;
+                    font-size: 16px;
+                }
+                .edit{
+                    position: relative;
+                    display: block;
+                    width: 30%;
+                    margin: 0;
+                    float: right;
+                    font-family: $primary;
+                    color: #FFF !important;
+                    background-color: #0984e3;
+                    font-size: 16px;
+                    padding: 5px;
+                    border-radius: 3px;
+                    text-align: center;
+                    text-decoration: none;
+                    border: none;
+                    opacity: 0.9;
+                    transition: all 0.3s;
+                    &:hover{
+                        background-color: #006abc;
+                        opacity: 1;
+                        transition: all 0.3s;
+                    }
+                    &:active{
+                        outline: none;
+                        border: none;
+                    }
+                    &:focus{
+                        outline: none;
+                        border: none;
+                    }
+                }
+                span{
+                    display: block;
+                    text-align: right;
+                    font-size: 20px;
+                    color: #2d3436;
+                    font-family: $primary;
+                }
+            }
+            .lecture_attendance{
+                width: 95%;
+                margin: 0 auto;
+                padding: 0;
+                p{
+                    font-family: $primary;
+                    margin: 5px;
+                    font-size: 16px;
+                    text-align: center;
+                }
+                h4{
+                    display: block;
+                    font-family: $primary;
+                    text-align: left;
+                    padding: 10px;
+                    border-top-left-radius: 4px;
+                    border-top-right-radius: 4px;
+                    margin:0;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    &:hover{
+                        background-color: #2d3436;
+                        color: #FFF;
+                        transition: all 0.3s;
+                    }
+                    span{
+                        top:-5px;
+                        float: right;
+                        font-size: 30px;
+                    }
+                }
+                .attendance{
+                    position: relative;
+                    display: none;
+                    width: 100%;
+                    top:-1px;
+                    background-color: #2d3436;
+                    padding-bottom: 4px;
+                    border-bottom-left-radius: 4px;
+                    border-bottom-right-radius: 4px;
+                    .table{
+                        thead{
+                            tr{
+                                th{
+                                    text-align: center;
+                                }
+                            }
+                        }
+                        tr{
+                            color: #FFF;
+                            font-family: $primary;
+                            font-size: 16px;
+                            text-align: center;
+                        }
+                    }
+                }
+                .active{
+                    background-color: #2d3436;
+                    color: #FFF;
+                }
+            }
+        }
         p{
             font-family: $primary;
             color: #2d3436;
@@ -122,6 +287,156 @@ $primary:'Open Sans', sans-serif;
             outline: none;
             border: none;
         }
+    }
+    .pages{
+        background-color: #f0f0f0;
+        margin: 5px 0;
+        margin-top: 10px;
+        .pagination{
+            margin: 0;
+            background-color: #f0f0f0;
+            li{
+                background: none;
+                a{
+                    background: none;
+                    border: none;
+                    color: #2d3436;
+                    text-decoration: none;
+                    font-family: $primary;
+                    transition: all 0.3s;
+                    &:hover{
+                        background-color: #0984e3;
+                        color: #FFF;
+                        transition: all 0.3s;
+                    }
+                }
+            }
+            .active{
+                span{
+                    border: none;
+                    background-color: #0984e3;
+                }
+            }
+            .disabled{
+                span{
+                    background:none;
+                    color: #333;
+                    border: none;
+                }
+            }
+        }
+    }
+    .students{
+        display: inline-block;
+        width: 100%;
+        .student{
+            display: block;
+            width: 24%;
+            margin: 0.5%;
+            padding: 5px;
+            float: left;
+            box-shadow: 0px 0px 2px 0px #CCC;
+            img{
+                display: block;
+                width: 100%;
+                border-radius: 2px;
+            }
+            ul{
+                display: block;
+                margin: 0;
+                padding: 0;
+                li{
+                    display: block;
+                    margin: 5px 0px;
+                    padding: 2px;
+                    font-family: $primary;
+                    text-align: justify;
+                    border-bottom: 1px solid #CCC;
+                    span{
+                        display: block;
+                        font-family: $primary;
+                    }
+                    
+                }
+            }
+            .visit_profile{
+                position: relative;
+                display: block;
+                width: 50%;
+                margin: 0 auto;
+                font-family: $primary;
+                color: #FFF !important;
+                background-color: #0984e3;
+                font-size: 16px;
+                padding: 5px;
+                border-radius: 3px;
+                text-align: center;
+                text-decoration: none;
+                border: none;
+                opacity: 0.9;
+                transition: all 0.3s;
+                &:hover{
+                    background-color: #006abc;
+                    opacity: 1;
+                    transition: all 0.3s;
+                }
+                &:active{
+                    outline: none;
+                    border: none;
+                }
+                &:focus{
+                    outline: none;
+                    border: none;
+                }
+            }
+        }
+    }
+    .student{
+        position: relative;
+        top:50px;
+        .student_image{
+            display: block;
+            width: 40%;
+            margin: 0px auto;
+            img{
+                width: 100%;
+            }
+        }
+        .student_info{
+            width: 60%;
+            padding: 5px;
+            margin: 0 auto;
+            ul{
+                margin: 0;
+                padding: 0;
+                li{
+                    display: block;
+                    margin: 10px 0px;
+                    padding: 0;
+                    font-family: $primary;
+                    font-size: 20px;
+                    border-bottom: 2px solid #CCC;
+                    span{
+                        margin-left: 5px;
+                        font-family: $primary;
+                        float: right;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    h2{
+        font-family: $primary;
+        color: #2d3436;
+        border-bottom: 2px solid #CCC;
+        text-align: center;
+        padding: 10px;
+    }
+    p{
+        font-family: $primary;
+        text-align: center;
+        font-size: 16px;
     }
 }
 .modal{
@@ -274,7 +589,7 @@ $primary:'Open Sans', sans-serif;
                                 }
                                 .student{
                                     display: block;
-                                    width: 80%;
+                                    width: 95%;
                                     margin: 3px auto;
                                     background-color:#dfe6e9;
                                     border-radius: 3px;
@@ -527,11 +842,15 @@ $primary:'Open Sans', sans-serif;
     }
 }
 .right{
-    z-index: 9999;
+    background-color: #FFF;
+    padding-bottom: 15px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    z-index: 9998;
     .student_list{
         display: block;
         width: 99%;
-        min-height: 100px;
+        min-height: 50px;
         height: auto;
         margin: 0 auto;
         padding: 3px 0;
@@ -549,7 +868,7 @@ $primary:'Open Sans', sans-serif;
         }
         .student{
             display: block;
-            width: 80%;
+            width: 90%;
             margin: 3px auto;
             background-color:#dfe6e9;
             border-radius: 3px;
@@ -558,8 +877,8 @@ $primary:'Open Sans', sans-serif;
             cursor: pointer;
             transition: all 0.3s;
             &:hover{
-                opacity: 1;
-                background-color: #2d3436;
+                opacity: 1 !important;
+                background-color: #2d3436 !important;
                 transition: all 0.3s;
                 h4{
                     color: #FFF;
@@ -653,8 +972,8 @@ $primary:'Open Sans', sans-serif;
             }
         }
         .active{
-            opacity: 1;
-            background-color: #2d3436;
+            opacity: 1 !important;
+            background-color: #2d3436 !important;
             h4{
                 color: #FFF;
             }
@@ -694,5 +1013,45 @@ $primary:'Open Sans', sans-serif;
             border: none;
             color: #FFF;
         }            
+    }
+}
+.navbar{
+    display: block;
+    width: 80%;
+    margin: 0px auto;
+    border-radius: 0px;
+    padding: 0;
+    ul{
+        position: relative;
+        display: block;
+        margin: 0;
+        padding: 0;
+        border-bottom: 2px solid #CCC;
+        li{
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            a{
+                display: block;
+                margin:4px;
+                margin-bottom: 0;
+                padding: 10px; 
+                font-size: 16px;
+                text-align: center;
+                text-decoration: none;
+                font-family: $primary;
+                color: #2d3436;
+                transition: all 0.3s;
+                &:hover{
+                    background-color: #0984e3;
+                    color: #FFF;
+                    transition: all 0.3s;
+                }
+            }
+            .active{
+                background-color: #0984e3;
+                color: #FFF;
+            }
+        }
     }
 }

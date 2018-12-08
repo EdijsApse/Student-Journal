@@ -15,17 +15,17 @@
         <script src="{{ url('/')}}/calendar/js/cal_object.js"></script>
         <script src="{{url('/')}}/js/drag_drop.js"></script>
         <script src="{{url('/')}}/js/ajax.js"></script>
-        <script src="{{url('/')}}/js/after_ajax.js"></script>
         <script src="{{url('/')}}/js/additional_effects.js"></script>
         @yield('additional_head')
     </head>
     <body>
         <div class="container-fluid">
+            @yield('menu')
             <div class="row">
-                <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0 left">
+                <div class="col-md-3 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0 left">
                     @include('left_sidebar')
                 </div>
-                <div class="col-md-5 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 main">
+                <div class="col-md-6 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 main">
                     @yield('main_content')
                 </div>
                 <div class="col-md-3 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0 right">
@@ -56,7 +56,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="number">Studenta mobila numurs:</label>
-                                <input type="number" class="form-control" name="number" placeholder="Studenta mobila numurs. Garums - 8">
+                                <input type="text" class="form-control" name="number" placeholder="Studenta mobila numurs. Garums - 8">
                                 <span class="optional glyphicon glyphicon-asterisk"><span>Izvēles<span></span>
                             </div>
                             <div class="students">

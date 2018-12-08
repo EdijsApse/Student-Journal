@@ -4,8 +4,9 @@
         <p>Nav pievienots neviens students</p>
     @else
         @foreach($all_students as $student)
-            <div class="student" draggable="true">
-                <h4>{{$student->name}} {{$student->surname}}<span class="glyphicon glyphicon-option-horizontal"></span></h4>
+            <div class="student" draggable="true" value="{{$student->id}}" surname="{{$student->surname}}"><!--Nav labākā prakse gluži-->
+                <h4>{{$student->name}} {{$student->surname}}<span class="glyphicon glyphicon-option-horizontal"></span>
+                </h4>
                 <div class="details">
                     <div class="image">
                         <img src="{{url('/')}}/{{$student->image}}"/>
@@ -20,11 +21,10 @@
                             @endif
                         </li>
                     </ul>
-                    <a href="{{url('/')}}{{$student->id}}" class="student_profile">Statistika</a>
+                    <a href="{{url('/')}}/students/{{$student->id}}" class="student_profile">Apskatīt profilu</a>
                 </div>
             </div>
         @endforeach
     @endif
-    
-    <button class="btn btn-default add_student" data-toggle="modal" data-target="#student_modal">Pievienot studentu</button>
 </div>
+<button class="btn btn-default add_student" data-toggle="modal" data-target="#student_modal">Pievienot studentu</button>

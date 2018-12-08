@@ -18,4 +18,14 @@ $(document).ready(function(){
             $(this).children('.details').slideDown('fast');
         }
     })
+    $('.show_attendance').click(function(){//Animācija lago
+        if($(this).hasClass('active')){
+            $(this).siblings('.attendance').slideUp('fast');
+            $(this).removeClass('active');
+        }
+        else{
+            $(this).siblings('.attendance').slideDown('fast');
+            $(this).addClass('active');
+        }
+    })
 });

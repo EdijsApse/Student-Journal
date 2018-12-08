@@ -15,6 +15,9 @@ function calendar_object(){
 	this.get_month = function(){//Need to be as function, otherwise this.date_now month is not updating
 		return this.date_now.getMonth();//Return month from core date
 	}
+	this.get_date = function(){
+		return this.date_now.getDate();
+	}
 	this.set_month = function(month){//Set month to this.date_now
 		var current_month = this.get_month(),
 			new_month;
@@ -96,7 +99,6 @@ function calendar_object(){
 	this.draw_calendar = function(){
 		var weeks = this.get_full_weeks(),
 			days = this.get_month_days_array(),
-			events = this.get_events(),//events is used to call only function, function doesnt return anything
 			calendar_array_for_drawing = [];
 		for(var i = 0; i < weeks.length; i++){
 			var week = {};
@@ -110,138 +112,4 @@ function calendar_object(){
 		}
 		return calendar_array_for_drawing;
 	}
-	this.get_events = function(){
-		var month = this.get_month() + 1,//+1 Cuz JS getMonth() 0-11
-			year = this.get_year();
-			month = converter(month.toString());
-		$(".event").css("visibility","hidden");
-		$.ajax({
-			method:"GET",
-			url:"/ajax_handler",
-			data:{
-				purpose:"calendar_events",
-				event_month:month,
-				event_year:year
-			},
-			success: function(){
-				
-			},
-			error: function(){
-				
-			},
-			complete: function(xhr){
-				var ajax_response,
-					event_count = 0,
-					events = false;//No events by default
-				try{
-					ajax_response = JSON.parse(xhr.responseText);//If JS can parse response, it means there is events, so
-					events = true;//Events is true
-				}
-				catch(err){
-				}
-				if(events == true){
-					if(ajax_response.user_event.length > 0){
-						for(var i = 0, user_day; i < ajax_response.user_event.length; i++, event_count++){
-							event_day = ajax_response.user_event[i].date;//Gets lesson date
-							day_splited_arr = event_day.split("-");//Splits it
-							user_day = day_splited_arr[2];
-							if(user_day[0] == '0'){
-								user_day = user_day[1];
-							}
-							$(".day").filter(function() {
-								if($(this).text() === user_day){
-									$(this).siblings(".event").css({
-										"visibility":"visible",
-										"color":"#0042af"
-									});
-									$(this).parent().css("box-shadow","0px 0px 2px 1px rgba(255, 255, 255, 0.2)");
-								}
-							});
-						}
-					}
-					if(ajax_response.post_event.length > 0){
-						for(var i = 0, post_day; i < ajax_response.post_event.length; i++, event_count++){
-							event_day = ajax_response.post_event[i].date;//Gets lesson date
-							day_splited_arr = event_day.split("-");//Splits it
-							post_day = day_splited_arr[2];
-							if(post_day[0] == '0'){
-								post_day = post_day[1];
-							}
-							$(".day").filter(function() {
-								if($(this).text() === post_day){
-									if($(this).siblings(".event").css("visibility") == 'visible'){
-										$(this).siblings(".event").css('color','#FFF');
-									}
-									else{
-										$(this).siblings(".event").css({
-											"visibility":"visible",
-											"color":"#c40000"
-										});
-										$(this).parent().css("box-shadow","0px 0px 2px 1px rgba(255, 255, 255, 0.2)");
-									}
-								}
-							});
-						}
-					}
-					if(ajax_response.update_event.length > 0){
-						for(var i = 0, update_day; i < ajax_response.update_event.length; i++, event_count++){
-							update_day = ajax_response.update_event[i].date;
-							day_splited_arr = update_day.split("-");//Splits it
-							update_day = day_splited_arr[2];
-							if(update_day[0] == '0'){
-								update_day = update_day[1];
-							}
-							$(".day").filter(function() {
-								if($(this).text() === update_day){
-									if($(this).siblings(".event").css("visibility") == 'visible'){
-										$(this).siblings(".event").css('color','#FFF');
-									}
-									else{
-										$(this).siblings(".event").css({
-											"visibility":"visible",
-											"color":"#ffb600"
-										});
-										$(this).parent().css("box-shadow","0px 0px 2px 1px rgba(255, 255, 255, 0.2)");
-									}
-								}
-							});
-						}
-					}
-					add_effects();
-				}
-				$(".show_calendar  > h3 > .badge").text(event_count);
-			}
-		});
-	}
-	this.get_day_event = function(selected_day){
-		//Without .toString(), js .length propertie isnt working
-		var date = converter(selected_day.toString()),
-			month = this.get_month()+1,
-			year = this.get_year();
-			month = converter(month.toString());
-		$.ajax({
-			method:"GET",
-			url:"/ajax_handler",
-			data:{
-				purpose:"day_event",
-				date:year + "-" + month + "-" + date
-			},
-			success: function(){
-				
-			},
-			error: function(){
-				
-			},
-			complete: function(xhr){
-				$('.event_container').html(xhr.responseText);
-			}
-		});
-	}
-}
-function converter(number){//Adds 0 in front of number if needed (FOR database Only)
-	var date = number;
-	if(date.length == 1){
-		date = '0' + date;
-	}
-	return date;
 }

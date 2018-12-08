@@ -12,8 +12,11 @@
 */
 
 Route::get('/', 'JournalController@get_todays_visit');
-Route::get('/{year}-{month}-{date}', 'JournalController@get_visit')->middleware('correctDate');
-Route::get('/failed', function(){
-    return view('failed');
-});
-Route::post('/ajax_handler', 'JournalController@add_student');
+Route::get('/calendar/{year}-{month}-{date}', 'JournalController@get_date_lectures');
+Route::get('/calendar/{year}-{month}', 'JournalController@get_months_lectures');
+Route::get('/calendar/{year}', 'JournalController@get_year_lectures');
+Route::get('/lectures', 'JournalController@get_all_lectures');
+Route::get('/students', 'JournalController@get_all_students');
+Route::get('/students/{id}', 'JournalController@get_specific_student');
+Route::post('/add_student', 'JournalController@add_student');
+Route::post('/add_lecture', 'JournalController@add_lecture');

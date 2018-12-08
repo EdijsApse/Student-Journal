@@ -6,7 +6,7 @@
 .left .left-sidebar .calendar_container .calendar_title {
   display: block;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   font-family: "Open Sans", sans-serif;
   color: #2d3436;
   cursor: default;
@@ -88,10 +88,205 @@
   transition: all 0.3s;
 }
 
-.main .visit_title {
+.main {
+  padding: 0;
+}
+
+.main .sections {
+  display: block;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin: 5px 0px;
+}
+
+.main .sections ul {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  margin: 0;
+}
+
+.main .sections ul li {
+  display: inline-block;
+  margin: 0 3px;
+  padding: 0;
+}
+
+.main .sections ul li a {
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  margin: 2px;
+  font-size: 18px;
+  color: #2d3436;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.main .sections ul li a:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #0984e3;
+}
+
+.main .sections ul li .active {
+  color: #0984e3;
+  font-weight: bold;
+}
+
+.main .sections ul li span {
+  font-size: 18px;
+}
+
+.main .lectures {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.main .lectures .lecture {
+  display: block;
+  background-color: #FFF;
+  margin: 7px;
+  -webkit-box-shadow: 0px 0px 3px 1px #ccc;
+          box-shadow: 0px 0px 3px 1px #ccc;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.main .lectures .lecture h3 {
+  width: 95%;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: left;
   font-family: "Open Sans", sans-serif;
   color: #2d3436;
+  border-bottom: 2px solid #2d3436;
+}
+
+.main .lectures .lecture .lecture_description {
+  display: inline-block;
+  width: 95%;
+  left: 2.5%;
+  padding: 5px;
+}
+
+.main .lectures .lecture .lecture_description p {
+  text-indent: 10px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.main .lectures .lecture .lecture_description .edit {
+  position: relative;
+  display: block;
+  width: 30%;
+  margin: 0;
+  float: right;
+  font-family: "Open Sans", sans-serif;
+  color: #FFF !important;
+  background-color: #0984e3;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 3px;
   text-align: center;
+  text-decoration: none;
+  border: none;
+  opacity: 0.9;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.main .lectures .lecture .lecture_description .edit:hover {
+  background-color: #006abc;
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.main .lectures .lecture .lecture_description .edit:active {
+  outline: none;
+  border: none;
+}
+
+.main .lectures .lecture .lecture_description .edit:focus {
+  outline: none;
+  border: none;
+}
+
+.main .lectures .lecture .lecture_description span {
+  display: block;
+  text-align: right;
+  font-size: 20px;
+  color: #2d3436;
+  font-family: "Open Sans", sans-serif;
+}
+
+.main .lectures .lecture .lecture_attendance {
+  width: 95%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main .lectures .lecture .lecture_attendance p {
+  font-family: "Open Sans", sans-serif;
+  margin: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.main .lectures .lecture .lecture_attendance h4 {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  padding: 10px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.main .lectures .lecture .lecture_attendance h4:hover {
+  background-color: #2d3436;
+  color: #FFF;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.main .lectures .lecture .lecture_attendance h4 span {
+  top: -5px;
+  float: right;
+  font-size: 30px;
+}
+
+.main .lectures .lecture .lecture_attendance .attendance {
+  position: relative;
+  display: none;
+  width: 100%;
+  top: -1px;
+  background-color: #2d3436;
+  padding-bottom: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.main .lectures .lecture .lecture_attendance .attendance .table thead tr th {
+  text-align: center;
+}
+
+.main .lectures .lecture .lecture_attendance .attendance .table tr {
+  color: #FFF;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+.main .lectures .lecture .lecture_attendance .active {
+  background-color: #2d3436;
+  color: #FFF;
 }
 
 .main .lectures p {
@@ -130,6 +325,182 @@
 .main .add:focus {
   outline: none;
   border: none;
+}
+
+.main .pages {
+  background-color: #f0f0f0;
+  margin: 5px 0;
+  margin-top: 10px;
+}
+
+.main .pages .pagination {
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.main .pages .pagination li {
+  background: none;
+}
+
+.main .pages .pagination li a {
+  background: none;
+  border: none;
+  color: #2d3436;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.main .pages .pagination li a:hover {
+  background-color: #0984e3;
+  color: #FFF;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.main .pages .pagination .active span {
+  border: none;
+  background-color: #0984e3;
+}
+
+.main .pages .pagination .disabled span {
+  background: none;
+  color: #333;
+  border: none;
+}
+
+.main .students {
+  display: inline-block;
+  width: 100%;
+}
+
+.main .students .student {
+  display: block;
+  width: 24%;
+  margin: 0.5%;
+  padding: 5px;
+  float: left;
+  -webkit-box-shadow: 0px 0px 2px 0px #CCC;
+          box-shadow: 0px 0px 2px 0px #CCC;
+}
+
+.main .students .student img {
+  display: block;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.main .students .student ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.main .students .student ul li {
+  display: block;
+  margin: 5px 0px;
+  padding: 2px;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify;
+  border-bottom: 1px solid #CCC;
+}
+
+.main .students .student ul li span {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+}
+
+.main .students .student .visit_profile {
+  position: relative;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+  color: #FFF !important;
+  background-color: #0984e3;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  opacity: 0.9;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.main .students .student .visit_profile:hover {
+  background-color: #006abc;
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.main .students .student .visit_profile:active {
+  outline: none;
+  border: none;
+}
+
+.main .students .student .visit_profile:focus {
+  outline: none;
+  border: none;
+}
+
+.main .student {
+  position: relative;
+  top: 50px;
+}
+
+.main .student .student_image {
+  display: block;
+  width: 40%;
+  margin: 0px auto;
+}
+
+.main .student .student_image img {
+  width: 100%;
+}
+
+.main .student .student_info {
+  width: 60%;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.main .student .student_info ul {
+  margin: 0;
+  padding: 0;
+}
+
+.main .student .student_info ul li {
+  display: block;
+  margin: 10px 0px;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  border-bottom: 2px solid #CCC;
+}
+
+.main .student .student_info ul li span {
+  margin-left: 5px;
+  font-family: "Open Sans", sans-serif;
+  float: right;
+  font-weight: bold;
+}
+
+.main h2 {
+  font-family: "Open Sans", sans-serif;
+  color: #2d3436;
+  border-bottom: 2px solid #CCC;
+  text-align: center;
+  padding: 10px;
+}
+
+.main p {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 16px;
 }
 
 .modal .modal-dialog .modal-content .modal-body {
@@ -322,7 +693,7 @@
 
 .modal .modal-dialog .modal-content .modal-body .my-form .students .attendance .visit .student {
   display: block;
-  width: 80%;
+  width: 95%;
   margin: 3px auto;
   background-color: #dfe6e9;
   border-radius: 3px;
@@ -613,13 +984,17 @@
 }
 
 .right {
-  z-index: 9999;
+  background-color: #FFF;
+  padding-bottom: 15px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  z-index: 9998;
 }
 
 .right .student_list {
   display: block;
   width: 99%;
-  min-height: 100px;
+  min-height: 50px;
   height: auto;
   margin: 0 auto;
   padding: 3px 0;
@@ -643,7 +1018,7 @@
 
 .right .student_list .student {
   display: block;
-  width: 80%;
+  width: 90%;
   margin: 3px auto;
   background-color: #dfe6e9;
   border-radius: 3px;
@@ -655,8 +1030,8 @@
 }
 
 .right .student_list .student:hover {
-  opacity: 1;
-  background-color: #2d3436;
+  opacity: 1 !important;
+  background-color: #2d3436 !important;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -766,8 +1141,8 @@
 }
 
 .right .student_list .active {
-  opacity: 1;
-  background-color: #2d3436;
+  opacity: 1 !important;
+  background-color: #2d3436 !important;
 }
 
 .right .student_list .active h4 {
@@ -812,6 +1187,54 @@
 .right .add_student:focus {
   outline: none;
   border: none;
+  color: #FFF;
+}
+
+.navbar {
+  display: block;
+  width: 80%;
+  margin: 0px auto;
+  border-radius: 0px;
+  padding: 0;
+}
+
+.navbar ul {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px solid #CCC;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  display: block;
+  margin: 4px;
+  margin-bottom: 0;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  color: #2d3436;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.navbar ul li a:hover {
+  background-color: #0984e3;
+  color: #FFF;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.navbar ul li .active {
+  background-color: #0984e3;
   color: #FFF;
 }
 /*# sourceMappingURL=style.css.map */
