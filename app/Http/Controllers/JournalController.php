@@ -241,8 +241,7 @@ class JournalController extends Controller
         return view('lectures')->with('lectures', $lectures);
     }
     public function get_all_students(){
-        $students = Students::orderBy('name','asc')->paginate(12);
-        return view('students')->with('students', $students);
+        return view('students')->with('students', Students::getStudents());
     }
     public function get_specific_student($id){
         $this->update_student_views($id);
